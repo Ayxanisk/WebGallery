@@ -104,11 +104,9 @@ const translations = {
 };
 
 
-// Элементы, которые нужно перевести
 const text1Element = document.getElementById('gallery-highlight');
 const text2Element = document.getElementById('text-2');
 
-// Обработчик переключения языка
 checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
         text1Element.textContent = translations.en.featuredText;
