@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night - Web Gallery</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <svg class="icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+            </svg>
+            <h1>Web Gallery</h1>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="night.html" class="active">Night</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href=contact.html>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="main-container">
+    <div class="box-of-star1">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star2">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star3">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="box-of-star4">
+        <div class="star star-position1"></div>
+        <div class="star star-position2"></div>
+        <div class="star star-position3"></div>
+        <div class="star star-position4"></div>
+        <div class="star star-position5"></div>
+        <div class="star star-position6"></div>
+        <div class="star star-position7"></div>
+    </div>
+    <div class="scroll-to-top" id="scrollToTop">
+        ↑
+    </div>
+    <div style="display: flex; flex-direction: row">
+        <h2>Night Wallpapers</h2>
+        <div class="loader"></div>
+    </div>
+    <p>Check out our gallery of images.</p>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="images/photo-1732014814175-14a0a14a65df.avif" alt="Image 1" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://unsplash.com/photos/a-man-standing-on-a-bridge-looking-at-the-water-o-Cyv0pUPnI" target="_blank" download class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/premium_photo-1675826460422-e39481fae224.avif" alt="Image 2" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://unsplash.com/photos/an-aerial-view-of-a-city-at-night-dAwf6NiQc3U" download  class="download-button" target="_blank">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/premium_photo-1686050878751-89499d28d153.avif" alt="Image 3" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://unsplash.com/photos/the-night-sky-is-filled-with-stars-and-trees-EZ-8F58W478" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/photo-1708848462812-8645bf6f264e.avif" alt="Image 4" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://unsplash.com/photos/a-fireworks-display-in-the-night-sky-jGxmpfE2wdw" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/1382149%20(1).png" alt="Image 5" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://wall.alphacoders.com/big.php?i=1382149" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/photo-1732115482599-af8e7494cb5c.avif" alt="Image 6" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://unsplash.com/photos/a-night-time-view-of-a-town-and-mountains-XcWjOsocNqg" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/1337139.png" alt="Image 7" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://wall.alphacoders.com/big.php?i=1337139" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/320630.jpg" alt="Image 8" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://pics.alphacoders.com/pictures/view/320630" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/1346240.png" alt="Image 9" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://wall.alphacoders.com/big.php?i=1346240" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/1337141.png" alt="Image 10" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://wall.alphacoders.com/big.php?i=1337141" download target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/1331867.jpeg" alt="Image 11" onclick="openFullscreen(this)">
+            <div class="buttons">
+                <a href="https://wall.alphacoders.com/big.php?i=1331867" download="1331867.jpeg" target="_blank" class="download-button">Download</a>
+            </div>
+        </div>
+    </div>
+    <div id="fullscreen-container" onclick="closeFullscreen()">
+        <img id="fullscreen-image" src="" alt="Fullscreen">
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Web Gallery</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

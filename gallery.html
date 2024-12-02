@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Web Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <a href="index.html" class="logo-link">
+      <svg class="icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+      </svg>
+      <h1>Web Gallery</h1>
+    </a>
+  </div>
+ <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="night.html">Night</a></li>
+      <li><a href="anime.html">Anime</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="main-container">
+  <div class="box-of-star1">
+    <div class="star star-position1"></div>
+    <div class="star star-position2"></div>
+    <div class="star star-position3"></div>
+    <div class="star star-position4"></div>
+    <div class="star star-position5"></div>
+    <div class="star star-position6"></div>
+    <div class="star star-position7"></div>
+  </div>
+  <div class="box-of-star2">
+    <div class="star star-position1"></div>
+    <div class="star star-position2"></div>
+    <div class="star star-position3"></div>
+    <div class="star star-position4"></div>
+    <div class="star star-position5"></div>
+    <div class="star star-position6"></div>
+    <div class="star star-position7"></div>
+  </div>
+  <div class="box-of-star3">
+    <div class="star star-position1"></div>
+    <div class="star star-position2"></div>
+    <div class="star star-position3"></div>
+    <div class="star star-position4"></div>
+    <div class="star star-position5"></div>
+    <div class="star star-position6"></div>
+    <div class="star star-position7"></div>
+  </div>
+  <div class="box-of-star4">
+    <div class="star star-position1"></div>
+    <div class="star star-position2"></div>
+    <div class="star star-position3"></div>
+    <div class="star star-position4"></div>
+    <div class="star star-position5"></div>
+    <div class="star star-position6"></div>
+    <div class="star star-position7"></div>
+  </div>
+  <div class="scroll-to-top" id="scrollToTop">
+    ↑
+  </div>
+  <div style="display: flex; flex-direction: row">
+    <h2>Wallpapers </h2>
+    <div class="loader"></div>
+  </div>
+  <p>Check out our gallery of images.</p>
+  <div class="gallery">
+    <div class="image-container">
+      <img src="images/photo-1663970206579-c157cba7edda.avif" alt="Image 1" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://unsplash.com/photos/background-pattern-37WxvlfW3to" target="_blank" download class="download-button">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/premium_photo-1675198764368-9603925ebd56.avif" alt="Image 2" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees--dDhMGApYtw" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/photo-1670434846352-23e8f0e28c16.avif" alt="Image 3" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://unsplash.com/photos/background-pattern-AwuBx2ocy34" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+     <div class="image-container">
+      <img src="images/photo-1664329182818-f375993c0a00.avif" alt="Image 4" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://unsplash.com/photos/background-pattern-pCokuYkv9kg" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/premium_photo-1675198764473-30434364c8b6.avif" alt="Image 5" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://unsplash.com/photos/the-sun-shines-through-the-trees-in-the-woods-qlb3_A52Bj8" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/1350069.jpeg" alt="Image 6" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=1350069" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/1350707.jpeg" alt="Image 7" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=1350707" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/1339755.jpeg" alt="Image 8" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=1339755" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/1349491.jpeg" alt="Image 9" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=1349491" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/685698.jpg" alt="Image 10" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=685698" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="images/1377233.png" alt="Image 11" onclick="openFullscreen(this)">
+      <div class="buttons">
+        <a href="https://wall.alphacoders.com/big.php?i=1377233" download class="download-button" target="_blank">Download</a>
+      </div>
+    </div>
+  </div>
+  <div id="fullscreen-container" onclick="closeFullscreen()">
+    <img id="fullscreen-image" src="" alt="Fullscreen">
+  </div>
+</div>
+<footer>
+  <p>&copy; 2024 My Website</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
