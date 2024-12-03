@@ -135,10 +135,7 @@ main h2{
     align-items: center;
     color: white;
 }
-.categories h3
-{
-    margin-top: 1em;
-}
+
 
 .home-container {
     padding: 2em;
@@ -373,15 +370,7 @@ header, footer {
         transform: translateY(0);
     }
 }
-.lang-btn
-{
-    padding: 0.8em 2em;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+
 header {
     display: flex;
     align-items: center;
@@ -507,7 +496,6 @@ nav a.active::after {
 }
 
 @media (max-width: 853px) {
-
     .hideOnMobile {
         display: none;
     }
