@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (footer) {
                     footer.remove();
                 }
+                const loader = tempDiv.querySelector('.loader');
+                if (loader)
+                {
+                    loader.remove();
+                }
+
                 contentArea.innerHTML = tempDiv.innerHTML;
 
             } else {
