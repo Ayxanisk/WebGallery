@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="overflow-x: hidden">
 <header>
     <div class="logo-container">
         <a href="index.html" class="logo-link">
@@ -28,6 +28,11 @@
             <li><a href="contact.html"  class="nav-link" data-page="contact">Contact</a></li>
         </ul>
         <ul>
+            <select class="change-lang" id="languageSelector">
+                <option value="en" selected>EN</option>
+                <option value="ru">RU</option>
+                <option value="az">AZ</option>
+            </select>
             <li class="hideOnMobile"><a href="index.html"  class="nav-link" data-page="home">Home</a></li>
             <li class="hideOnMobile"><a href="about.html"  class="nav-link"  data-page="about">About</a></li>
             <li class="hideOnMobile"><a href="night.html"   class="active"  data-page="night">Night</a></li>
@@ -79,10 +84,10 @@
         ↑
     </div>
     <div style="display: flex; flex-direction: row">
-        <h2>Night Wallpapers</h2>
+        <h2 data-id="nightTitle">Night Wallpapers</h2>
         <div class="loader"></div>
     </div>
-    <p>Check out our gallery of images.</p>
+    <p data-id="nightText">Check out our gallery of images.</p>
     <div class="gallery">
         <div class="image-container">
             <img src="images/photo-1732014814175-14a0a14a65df.avif" alt="Image 1" onclick="openFullscreen(this)">
@@ -156,7 +161,7 @@
     </div>
 </div>
 <footer>
-    <p>&copy; 2024 Web Gallery</p>
+    <p>&copy; 2024 Web Gallery Created by Ayxan</p>
 </footer>
 <script src="script.js"></script>
 </body>

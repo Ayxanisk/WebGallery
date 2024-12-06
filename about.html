@@ -7,7 +7,7 @@
   <title>About - Web Gallery</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="overflow-x: hidden">
 <header>
   <div class="logo-container">
     <a href="index.html" class="logo-link">
@@ -28,6 +28,11 @@
       <li><a href="contact.html"  class="nav-link" data-page="contact">Contact</a></li>
     </ul>
     <ul>
+      <select class="change-lang" id="languageSelector">
+        <option value="en" selected>EN</option>
+        <option value="ru">RU</option>
+        <option value="az">AZ</option>
+      </select>
       <li class="hideOnMobile"><a href="index.html" class="nav-link" data-page="home">Home</a></li>
       <li class="hideOnMobile"><a href="about.html"   class="active"   data-page="about">About</a></li>
       <li class="hideOnMobile"><a href="night.html"  class="nav-link"  data-page="night">Night</a></li>
@@ -79,35 +84,35 @@
     ↑
   </div>
   <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Web Gallery! We are a passionate team dedicated to showcasing the beauty of visual art, photography, and creativity. Our mission is to create a platform where people can share, discover, and enjoy high-quality images from artists around the world.</p>
+    <h2 data-id="aboutTitle">About Us</h2>
+    <p data-id="aboutIntro">Welcome to Web Gallery! We are a passionate team dedicated to showcasing the beauty of visual art, photography, and creativity. Our mission is to create a platform where people can share, discover, and enjoy high-quality images from artists around the world.</p>
 
     <div class="our-vision">
-      <h3>Our Vision</h3>
-      <p>We believe that art has the power to inspire, connect, and change the world. Our goal is to make art accessible to everyone, regardless of location or background. Through our gallery, we aim to foster creativity and inspire new ideas among artists and art lovers alike.</p>
+      <h3 data-id="visionTitle">Our Vision</h3>
+      <p data-id="visionText">We believe that art has the power to inspire, connect, and change the world. Our goal is to make art accessible to everyone, regardless of location or background. Through our gallery, we aim to foster creativity and inspire new ideas among artists and art lovers alike.</p>
     </div>
 
     <div class="our-team">
-      <h3>Meet the Team</h3>
-      <p>Our team is made up of individuals who are passionate about art, design, and technology. We work together to bring the best gallery experience to you.</p>
+      <h3 data-id="teamTitle">Meet the Team</h3>
+      <p data-id="teamIntro">Our team is made up of individuals who are passionate about art, design, and technology. We work together to bring the best gallery experience to you.</p>
       <ul>
-        <li><strong>Ayxan Iskender</strong> – Programmer</li>
-        <li><strong>John Doe</strong> – Founder & CEO</li>
-        <li><strong>Jane Smith</strong> – Creative Director</li>
-        <li><strong>Michael Brown</strong> – Technical Lead</li>
-        <li><strong>Sarah Lee</strong> – Marketing Manager</li>
+        <li id="teamMember1"  data-translate="teamMember1"><strong>Ayxan Iskender</strong> – Programmer</li>
+        <li id="teamMember2"  data-translate="teamMember2"><strong>John Doe</strong> – Founder & CEO</li>
+        <li id="teamMember3"  data-translate="teamMember3"><strong>Jane Smith</strong> – Creative Director</li>
+        <li id="teamMember4"  data-translate="teamMember4"><strong>Michael Brown</strong> – Technical Lead</li>
+        <li id="teamMember5"  data-translate="teamMember5"><strong>Sarah Lee</strong> – Marketing Manager</li>
       </ul>
     </div>
 
     <div class="our-story">
-      <h3>Our Story</h3>
-      <p>Web Gallery was founded in 2020 with the goal of providing a space for emerging and established artists to showcase their work. We started as a small community of artists, and over time, we’ve grown into a global platform. Today, we continue to grow, evolve, and innovate with the help of our incredible team and users.</p>
+      <h3 data-id="storyTitle">Our Story</h3>
+      <p data-id="storyText">Web Gallery was founded in 2020 with the goal of providing a space for emerging and established artists to showcase their work. We started as a small community of artists, and over time, we’ve grown into a global platform. Today, we continue to grow, evolve, and innovate with the help of our incredible team and users.</p>
     </div>
   </section>
 
 </div>
 <footer>
-  <p>&copy; 2024 Web Gallery</p>
+  <p>&copy; 2024 Web Gallery Created by Ayxan</p>
 </footer>
 <script src="script.js"></script>
 </body>
