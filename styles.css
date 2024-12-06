@@ -511,6 +511,12 @@ nav a.active::after {
     .logo-container {
         margin-left: 0;
     }
+    .box-of-star1,
+    .box-of-star2,
+    .box-of-star3,
+    .box-of-star4 {
+        display: none;
+    }
 }
 
 
