@@ -171,13 +171,6 @@ function applyLanguage(language) {
     });
 }
 
-fetch('/data/translations2.json')
-    .then(response => response.json())
-    .then(translations2 => {
-
-    })
-    .catch(error => console.error('Error loading translations2:', error));
-
 
 const button = document.querySelector("#send");
 const toast = document.querySelector(".toast");
