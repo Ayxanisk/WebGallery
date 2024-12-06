@@ -84,33 +84,132 @@ function hideSidebar()
     sidebar.style.display = 'none';
 }
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/data/translations.json')
-        .then(response => response.json())
-        .then((translations) => {
-            function changeLanguage(language) {
-                const elements = document.querySelectorAll('[data-id]');
-                elements.forEach((element) => {
-                    const key = element.getAttribute('data-id');
-                    if (translations[language][key]) {
-                        element.textContent = translations[language][key];
-                    }
-                });
+    const translations = {
+        en: {
+            welcomeTitle: "Welcome to Our Web Gallery",
+            welcomeText: "Explore a collection of stunning images, showcasing everything from breathtaking landscapes to intricate artwork...",
+            welcomeText2: "We believe in the power of visuals to connect people and tell stories. Dive into our gallery and let your imagination wander through each photo, every detail captured with passion and purpose.",
+            featuredCollectionTitle: "Featured Collection",
+            featuredCollectionText: "Our featured collection this month highlights 'Nature in Motion'...",
+            aboutTitle: "About Us",
+            aboutIntro: "Welcome to Web Gallery! We are a passionate team dedicated to showcasing the beauty of visual art, photography, and creativity. Our mission is to create a platform where people can share, discover, and enjoy high-quality images from artists around the world.",
+            visionTitle: "Our Vision",
+            visionText: "We believe that art has the power to inspire, connect, and change the world. Our goal is to make art accessible to everyone, regardless of location or background. Through our gallery, we aim to foster creativity and inspire new ideas among artists and art lovers alike.",
+            teamTitle: "Meet the Team",
+            teamIntro: "Our team is made up of individuals who are passionate about art, design, and technology. We work together to bring the best gallery experience to you.",
+            storyTitle: "Our Story",
+            storyText: "Web Gallery was founded in 2020 with the goal of providing a space for emerging and established artists to showcase their work. We started as a small community of artists, and over time, we’ve grown into a global platform. Today, we continue to grow, evolve, and innovate with the help of our incredible team and users.",
+            nightTitle:"Night Wallpapers",
+            nightText:"Check out our gallery of images.",
+            animeTitle:"Anime Wallpapers",
+            animeText:"Check out our gallery of images.",
+            galleryTitle:"Wallpapers",
+            galleryText:"Check out our gallery of images.",
+            contactTitle: "Contact Us",
+            contactText: "If you have any questions, feedback, or inquiries, feel free to reach out to us! We would love to hear from you and will respond as soon as possible.",
+            contactInfo: "Get in touch",
+            sendMessage:"Send us a message:",
+            message:"Success",
+            messageText:"Message are sent",
+            name:"Your Name",
+            email:"Your Email",
+            yourMessage: "Your Message",
+            button:"Send Message"
+
+        },
+        ru: {
+            welcomeTitle: "Добро пожаловать в нашу веб-галерею",
+            welcomeText: "Исследуйте коллекцию потрясающих изображений, от захватывающих пейзажей до сложных произведений искусства...",
+            welcomeText2: "Мы верим в силу визуальных образов, которые объединяют людей и рассказывают истории. Погрузитесь в нашу галерею и позвольте своему воображению блуждать по каждой фотографии, каждой детали, запечатленной со страстью и целью.",
+            featuredCollectionTitle: "Рекомендуемая коллекция",
+            featuredCollectionText: "Рекомендуемая коллекция этого месяца — 'Природа в движении'...",
+            aboutTitle: "О нас",
+            aboutIntro: "Добро пожаловать в Web Gallery! Мы — команда, которая увлечена искусством, фотографией и творчеством. Наша миссия — создать платформу, где люди могут делиться, открывать и наслаждаться качественными изображениями от художников со всего мира.",
+            visionTitle: "Наше видение",
+            visionText: "Мы верим, что искусство обладает силой вдохновлять, объединять и менять мир. Наша цель — сделать искусство доступным каждому, независимо от местоположения или происхождения. Через нашу галерею мы стремимся развивать творчество и вдохновлять новые идеи среди художников и любителей искусства.",
+            teamTitle: "Наша команда",
+            teamIntro: "Наша команда состоит из людей, которые увлечены искусством, дизайном и технологиями. Мы работаем вместе, чтобы обеспечить вам лучший опыт в галерее.",
+            storyTitle: "Наша история",
+            storyText: "Web Gallery была основана в 2020 году с целью предоставить пространство для начинающих и известных художников, чтобы демонстрировать свои работы. Мы начали как небольшое сообщество художников, а со временем стали глобальной платформой. Сегодня мы продолжаем расти, развиваться и внедрять инновации с помощью нашей невероятной команды и пользователей.",
+            nightTitle:"Ночные обои",
+            nightText:"Посмотрите нашу галерею изображений.",
+            animeTitle:"Аниме обои",
+            animeText:"Посмотрите нашу галерею изображений.",
+            galleryTitle:"Обои",
+            galleryText:"Посмотрите нашу галерею изображений.",
+            contactTitle: "Свяжитесь с нами",
+            contactText: "Если у вас есть вопросы, отзывы или запросы, не стесняйтесь обращаться к нам! Мы будем рады услышать вас и ответим как можно скорее.",
+            contactInfo: "Связаться с нами",
+            sendMessage: "Отправьте нам сообщение:",
+            message: "Успех",
+            messageText: "Сообщение отправлено",
+            name: "Ваше имя",
+            email: "Ваш email",
+            yourMessage: "Ваше сообщение",
+            button:"Отправить сообщение"
+        },
+        az: {
+            welcomeTitle: "Veb Qalereyamıza xoş gəlmisiniz",
+            welcomeText: "Gözəl mənzərələrdən incə sənət əsərlərinə qədər möhtəşəm təsvirlər toplusunu araşdırın...",
+            welcomeText2: "İnsanları birləşdirən və hekayələr izah edən vizualların gücünə inanırıq. Qalereyamıza daxil olun və təxəyyülünüzün hər bir fotoşəkildə, ehtiras və məqsədlə çəkilmiş hər bir detalda dolaşmasına icazə verin.",
+            featuredCollectionTitle: "Seçilmiş Kolleksiya",
+            featuredCollectionText: "Bu ayın seçilmiş kolleksiyası 'Hərəkətdə Təbiət'...",
+            aboutTitle: "Haqqımızda",
+            aboutIntro: "Web Gallery-ə xoş gəlmisiniz! Biz, vizual sənət, fotoqrafiya və yaradıcılıq gözəlliyini nümayiş etdirməyə həsr olunmuş həvəsli bir komandayıq. Missiyamız insanlara dünyanın müxtəlif yerlərindən olan rəssamların yüksək keyfiyyətli təsvirlərini bölüşmək, kəşf etmək və zövq almaq üçün platforma yaratmaqdır.",
+            visionTitle: "Bizim Baxışımız",
+            visionText: "Biz inanırıq ki, sənətin ilhamlandırmaq, birləşdirmək və dünyanı dəyişmək gücü var. Məqsədimiz sənəti hər kəs üçün əlçatan etməkdir, yer və ya mənşəyindən asılı olmayaraq. Qalereyamız vasitəsilə sənətçilər və sənət sevərlər arasında yaradıcılığı inkişaf etdirmək və yeni ideyaları ruhlandırmaq niyyətindəyik.",
+            teamTitle: "Komandamız",
+            teamIntro: "Komandamız sənət, dizayn və texnologiya ilə maraqlanan şəxslərdən ibarətdir. Sizə ən yaxşı qalereya təcrübəsini təqdim etmək üçün birlikdə çalışırıq.",
+            storyTitle: "Bizim Hekayəmiz",
+            storyText: "Web Gallery 2020-ci ildə təsis edilib və məqsədi inkişaf etməkdə olan və tanınmış rəssamların əsərlərini nümayiş etdirmək üçün yer təmin etmək olub. Biz kiçik bir sənətçi icması olaraq başladıq və zamanla qlobal bir platformaya çevrildik. Bu gün inanılmaz komandamızın və istifadəçilərimizin köməyi ilə böyüməyə, inkişaf etməyə və innovasiya etməyə davam edirik.",
+            nightTitle:"Gecə divar kağızları",
+            nightText:"Şəkillər qalereyamıza baxın.",
+            animeTitle:"Anime divar kağızları",
+            animeText:"Şəkillər qalereyamıza baxın.",
+            galleryTitle:"Divar kağızları",
+            galleryText:"Şəkillər qalereyamıza baxın.",
+            contactTitle: "Bizimlə əlaqə",
+            contactText: "Hər hansı bir sualınız, rəyiniz və ya sorğunuz varsa, bizimlə əlaqə saxlamaqdan çəkinməyin! Sizi eşitməkdən məmnun olarıq və ən qısa zamanda cavab verəcəyik.",
+            contactInfo: "Əlaqə saxlayın",
+            sendMessage: "Bizə mesaj göndərin:",
+            message: "Uğur",
+            messageText: "Mesaj göndərildi",
+            name: "Adınız",
+            email: "E-poçtunuz",
+            yourMessage: "Mesajınız",
+            button:"Mesaj göndər"
+        }
+    };
+    function changeLanguage(language) {
+        const elements = document.querySelectorAll('[data-id]');
+        elements.forEach((element) => {
+            const key = element.getAttribute('data-id');
+            if (translations[language][key]) {
+                element.textContent = translations[language][key];
             }
-            const languageSelector = document.getElementById('languageSelector');
+        });
+    }
+    const languageSelector = document.getElementById('languageSelector');
 
 
-            languageSelector.addEventListener('change', (event) => {
-                const selectedLanguage = event.target.value;
-                changeLanguage(selectedLanguage);
-            });
+    languageSelector.addEventListener('change', (event) => {
+        const selectedLanguage = event.target.value;
+        changeLanguage(selectedLanguage);
+    });
 
-            const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
-            document.querySelector(".change-lang").value = savedLanguage;
-            applyLanguage(savedLanguage);
-            changeLanguage(savedLanguage);
-        })
-        .catch(error => console.error('Error loading translations:', error));
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+    document.querySelector(".change-lang").value = savedLanguage;
+    applyLanguage(savedLanguage);
+    changeLanguage(savedLanguage);
+    // fetch('/data/translations.json')
+    //     .then(response => response.json())
+    //     .then((translations) => {
+    //
+    //     })
+    //     .catch(error => console.error('Error loading translations:', error));
 });
+
+
 
 const translations2 = {
     en: {
