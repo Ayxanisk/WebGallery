@@ -125,7 +125,7 @@ main h2{
 .logo-container {
     display: flex;
     align-items: center;
-    margin-left: 2rem;
+    margin-left: 1.3rem;
 }
 
 .logo-link {
@@ -506,8 +506,11 @@ nav a.active::after {
         width: 100%;
     }
     .title{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     };
+    .logo-container {
+        margin-left: 0;
+    }
 }
 
 
