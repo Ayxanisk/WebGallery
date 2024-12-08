@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     footer.remove();
                 }
                 const loader = tempDiv.querySelector('.loader');
-                if (loader)
-                {
+                if (loader) {
                     loader.remove();
                 }
 
@@ -59,6 +58,7 @@ scrollToTop.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
 function openFullscreen(img) {
     const fullscreenContainer = document.getElementById('fullscreen-container');
     const fullscreenImage = document.getElementById('fullscreen-image');
@@ -73,16 +73,16 @@ function closeFullscreen() {
     fullscreenContainer.style.display = 'none';
 }
 
-function showSidebar()
-{
+function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'flex';
 }
-function hideSidebar()
-{
+
+function hideSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none';
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     // const translations = {
     //     en: {
@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
+
             const languageSelector = document.getElementById('languageSelector');
 
 
@@ -256,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading translations:', error));
 });
-
 
 
 // const translations2 = {
