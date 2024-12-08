@@ -216,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('/data/translations.json')
         .then(response => response.json())
         .then((translations) => {
-            console.log(translations);
             function changeLanguage(language) {
                 const elements = document.querySelectorAll('[data-id]');
                 elements.forEach((element) => {
@@ -341,11 +340,3 @@ closeIcon.addEventListener("click", () => {
     clearTimeout(timer1);
     clearTimeout(timer2);
 });
-
-fetch('/data/translations.json')
-    .then(response => response.json())
-    .then(translations => {
-        // Используйте объект translations как раньше
-        console.log(translations);
-    })
-    .catch(error => console.error('Error loading translations:', error));
