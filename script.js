@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // };
 
-    fetch('/data/translations.json')
+    fetch('assets/translations.json')
         .then(response => response.json())
         .then((translations) => {
             function changeLanguage(language) {
@@ -313,25 +313,27 @@ const progress = document.querySelector(".progress");
 
 let timer1, timer2;
 
-button.addEventListener("click", () => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-    toast.classList.add("active");
-    progress.classList.add("active");
+button.addEventListener("click", (event) => {
+    onclick = (event) =>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        toast.classList.add("active");
+        progress.classList.add("active");
 
-    timer1 = setTimeout(() => {
-        toast.classList.remove("active");
-    }, 5000);
+        timer1 = setTimeout(() => {
+            toast.classList.remove("active");
+        }, 5000);
 
-    timer2 = setTimeout(() => {
-        progress.classList.remove("active");
-    }, 5300);
+        timer2 = setTimeout(() => {
+            progress.classList.remove("active");
+        }, 5300);
+    }
 });
 
-closeIcon.addEventListener("click", () => {
-
+closeIcon.addEventListener("click", (event) => {
     toast.classList.remove("active");
+
 
     setTimeout(() => {
         progress.classList.remove("active");
