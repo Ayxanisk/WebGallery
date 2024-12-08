@@ -313,8 +313,7 @@ const progress = document.querySelector(".progress");
 
 let timer1, timer2;
 
-button.addEventListener("click", (event) => {
-    onclick = (event) =>{
+button.addEventListener("click", () => {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("message").value = "";
@@ -328,12 +327,10 @@ button.addEventListener("click", (event) => {
         timer2 = setTimeout(() => {
             progress.classList.remove("active");
         }, 5300);
-    }
 });
 
-closeIcon.addEventListener("click", (event) => {
+closeIcon.addEventListener("click", () => {
     toast.classList.remove("active");
-
 
     setTimeout(() => {
         progress.classList.remove("active");
