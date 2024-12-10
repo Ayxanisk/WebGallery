@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading translations:', error));
 });
-const button = document.querySelector("#send");
+const button = document.getElementById("send");
 const toast = document.querySelector(".toast");
 const closeIcon = document.querySelector(".close");
 const progress = document.querySelector(".progress");
